@@ -1,11 +1,12 @@
  :root {
-  --columns-row: 16;
+  --grid-row: 1;
+  --grid-col: 1;
 }
  
  #container-div {
       display: grid;
-      grid-template-columns: repeat(var(--columns-row), 1fr);
-      grid-template-rows: repeat(var(--columns-row), 1fr);
+      grid-template-columns: repeat(var(--grid-row), 1fr);
+      grid-template-rows: repeat(var(--grid-col), 1fr);
       width: 900px;
       height: 900px;
   }
