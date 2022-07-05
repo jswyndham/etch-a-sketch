@@ -1,5 +1,6 @@
 const mainContainer = document.getElementById("container-div");
-const rowDiv = document.getElementById("row-div");
+const rowDiv = document.querySelector("#row-div");
+const btnOne = document.getElementById("btn-1");
 
 function container(row, col) {
     document.documentElement.style.setProperty('--grid-row', row);
@@ -11,10 +12,14 @@ function container(row, col) {
         mainContainer.appendChild(elementRow);
         
     }
-    rowDiv.addEventListener("mouseover", function(e) {
-        e.setAttribute("style", "color: red");
-    })
-    }
+    
+}
 
-container(16, 16);
+container(32, 32)
+
+
+
+
+
+
 

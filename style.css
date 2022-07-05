@@ -9,6 +9,7 @@
       grid-template-rows: repeat(var(--grid-col), 1fr);
       width: 900px;
       height: 900px;
+      background-color: "orange";
   }
 
   div {
@@ -16,3 +17,7 @@
      border: 1px solid #000;
   
   }
+
+ .blue {
+   background-color: blue;
+ }
