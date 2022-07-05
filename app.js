@@ -17,6 +17,14 @@ function container(row, col) {
 
 container(32, 32)
 
+let mouseDown = false;
+document.body.onmousedown = function() {
+    mouseDown = true;
+}
+document.body.onmouseup = function(){
+    mouseDown = false
+}
+
 
 
 
