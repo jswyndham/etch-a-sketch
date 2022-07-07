@@ -1,4 +1,4 @@
-const mainContainer = document.getElementById("container-div");
+const mainContainer = document.getElementById("content");
 const rowDiv = document.querySelector("#row-div");
 const btnOne = document.getElementById("btn-1");
 const btnTwo = document.getElementById("btn-2");
