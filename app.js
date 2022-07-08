@@ -3,6 +3,7 @@ const rowDiv = document.querySelector("#row-div");
 const btnOne = document.getElementById("btn-1");
 const btnTwo = document.getElementById("btn-2");
 const btnThree = document.getElementById("btn-3");
+const btnFour = document.getElementById("btn-4");
 
 function container(row, col) {
     document.documentElement.style.setProperty('--grid-row', row);
@@ -12,6 +13,7 @@ function container(row, col) {
         const elementRow = document.createElement("div");
         elementRow.classList.add("row");
         elementRow.setAttribute("id", "row-div");
+        elementRow.style.backgroundColor= "white";
         mainContainer.appendChild(elementRow);
 
         //The variables needed for the rainbow pen.
@@ -38,8 +40,14 @@ function container(row, col) {
             elementRow.addEventListener("mouseover", ()=> {
         elementRow.style.backgroundColor = `rgb(${color1},${color2},${color3})`;
         console.log(elementRow);
+        })});
+
+        btnFour.addEventListener('click', (e)=> {
+            elementRow.addEventListener("mouseover", ()=> {
+        elementRow.style.backgroundColor = `rgb(${color1},${color2},${color3})`;
+        console.log(elementRow);
         });
-    });
+        });
     }
 }
 
