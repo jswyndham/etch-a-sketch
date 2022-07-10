@@ -5,11 +5,15 @@ const btnEraser = document.getElementById("btn-eraser");
 const btnRainbow = document.getElementById("btn-rainbow");
 const btnShadow = document.getElementById("btn-shadow");
 const btnClearAll = document.getElementById("btn-clear-all");
+const slider = document.getElementById("myRange");
+const currentValue = document.getElementById("current-value");
 
-function container(row, col) {
-    document.documentElement.style.setProperty('--grid-row', row);
-    document.documentElement.style.setProperty('--grid-col', col);
-    for(let i = 0; i < (row * col); i++) {
+
+function pixelContainer(num) {
+    document.documentElement.style.setProperty('--grid-row', num);
+    document.documentElement.style.setProperty('--grid-col', num);
+    for(let i = 0; i < num * num; i++) {
+        
         //Firstly, created the dynamic div grid.
         const elementRow = document.createElement("div");
         elementRow.classList.add("row");
@@ -23,41 +27,45 @@ function container(row, col) {
         let color3 = Math.floor(Math.random() * 256);
                 
         //Secondly, buttons that turns on the pen feature, plus clear all.
-        btnBlack.addEventListener('click', (e)=> {
+        btnBlack.addEventListener('click', ()=> {
             elementRow.addEventListener("mouseover", ()=> {
                 elementRow.style.backgroundColor = "black";
                 console.log(btnBlack);
         });
         });
 
-        btnEraser.addEventListener('click', (e)=> {
+        btnEraser.addEventListener('click', ()=> {
             elementRow.addEventListener("mouseover", ()=> {
                 elementRow.style.backgroundColor = "white";
                 console.log(elementRow);
         });
         });
 
-        btnRainbow.addEventListener('click', (e)=> {
+        btnRainbow.addEventListener('click', ()=> {
             elementRow.addEventListener("mouseover", ()=> {
                 elementRow.style.backgroundColor = `rgba(${color1},${color2},${color3})`;
                 console.log(elementRow);
         })});
 
-        btnShadow.addEventListener('click', (e)=> {
+        btnShadow.addEventListener('click', ()=> {
             elementRow.addEventListener("mouseover", ()=> {
-                elementRow.style.backgroundColor = `rgba(0, 0, 0, .1)`;
+                elementRow.style.backgroundColor = `rgba(0, 0, 0, .2)`;
                 console.log(elementRow);
         });
         });
 
-        btnClearAll.addEventListener('click', (e)=> {
+        btnClearAll.addEventListener('click', ()=> {
             elementRow.style.backgroundColor = "white";
             console.log(btnClearAll);
         });
-        
-
     }
 }
 
-container(34, 16);
-
+slider.addEventListener('input', (e)=> {
+    let value = e.target.value;
+    currentValue.innerText = value;
+    num = parseInt(value);
+    console.log(slider.value);
+    console.log(num);
+    pixelContainer(slider.value);
+});

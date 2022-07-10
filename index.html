@@ -31,16 +31,22 @@
             <button id="btn-clear-all">clear grid</button>
             
             <div class="rows-and-columns">
-                <p><scan>rows</scan></p>
-                <div class="row-input-button">
-                    <input class="row-num" type="text" placeholder="Enter number...">
-                    <button class="btn-row" id="button-row" type="submit">Go!</button>
-                </div> 
-                <p><scan>columns</scan></p>
-                <div class="col-input-button">
-                    <input class="col-num" type="text" placeholder="Enter number...">
-                    <button class="btn-col" id="button-col" type="submit">Go!</button>
+                
+                <div class="slidecontainer">
+                    <p><scan>rows and columns</scan></p>
+
+                        <div class="show-value">
+                            <span id="current-value">36</span>
+                        </div>
+
+                    <input type="range" min="16" max="112" value="36" class="slider" id="myRange" steps="1">
+
+                    <div class="range">
+                        <div class="range-start">16</div>
+                        <div class="range-end">112</div>
+                    </div>
                 </div>
+                
             </div>
 
         </div>
