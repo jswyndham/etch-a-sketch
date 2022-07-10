@@ -29,10 +29,20 @@
             <button id="btn-shadow">shadow pen</button>
             <button id="btn-eraser">eraser</button>
             <button id="btn-clear-all">clear grid</button>
-            <p><scan>rows</scan></p>
-            <input class="row-num" type="text"> 
-            <p><scan>columns</scan></p>
-            <input class="col-num" type="text">
+            
+            <div class="rows-and-columns">
+                <p><scan>rows</scan></p>
+                <div class="row-input-button">
+                    <input class="row-num" type="text" placeholder="Enter number...">
+                    <button class="btn-row" id="button-row" type="submit">Go!</button>
+                </div> 
+                <p><scan>columns</scan></p>
+                <div class="col-input-button">
+                    <input class="col-num" type="text" placeholder="Enter number...">
+                    <button class="btn-col" id="button-col" type="submit">Go!</button>
+                </div>
+            </div>
+
         </div>
 
     </div>
