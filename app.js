@@ -1,10 +1,10 @@
 const mainContainer = document.getElementById("content");
 const rowDiv = document.querySelector("#row-div");
-const btnBlack = document.getElementById("btn-1");
-const btnEraser = document.getElementById("btn-2");
-const btnRainbow = document.getElementById("btn-3");
-const btnShadow = document.getElementById("btn-4");
-const btnClearAll = document.getElementById("btn-5");
+const btnBlack = document.getElementById("btn-black");
+const btnEraser = document.getElementById("btn-eraser");
+const btnRainbow = document.getElementById("btn-rainbow");
+const btnShadow = document.getElementById("btn-shadow");
+const btnClearAll = document.getElementById("btn-clear-all");
 
 function container(row, col) {
     document.documentElement.style.setProperty('--grid-row', row);
@@ -39,13 +39,13 @@ function container(row, col) {
 
         btnRainbow.addEventListener('click', (e)=> {
             elementRow.addEventListener("mouseover", ()=> {
-                elementRow.style.backgroundColor = `rgb(${color1},${color2},${color3})`;
+                elementRow.style.backgroundColor = `rgba(${color1},${color2},${color3})`;
                 console.log(elementRow);
         })});
 
         btnShadow.addEventListener('click', (e)=> {
             elementRow.addEventListener("mouseover", ()=> {
-                elementRow.style.backgroundColor = `rgb(${color1},${color2},${color3})`;
+                elementRow.style.backgroundColor = `rgba(0, 0, 0, .1)`;
                 console.log(elementRow);
         });
         });
@@ -59,5 +59,5 @@ function container(row, col) {
     }
 }
 
-container(64, 64);
+container(16, 16);
 

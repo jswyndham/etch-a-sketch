@@ -5,29 +5,76 @@
  
 body {
   margin: 0;
-  background-color: #F7ECDE;
+  background-color: #34333b;
+  
 }
 
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #54BAB9;
 }
 
 button {
-  padding: 15px;
-  margin: 1rem;
+  display: inline-block;
+  margin: 1em;
   height: 45px;
   width: 125px;
   border-radius: 7px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 10px;
-  box-shadow: 1px 1px 2px 0 rgb(109, 109, 109);
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 25px;
+  box-shadow: 0 8px 8px 2px rgba(2, 174, 253, 0.2);
+  border-color: #11eedb;
 }
 
+#btn-black {
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+}
+
+.r {
+  color: red;
+}
+
+.a {
+  color: yellowgreen;
+}
+
+.i {
+  color: blue;
+}
+
+.n {
+  color: blueviolet;
+}
+
+.b {
+  color: violet;
+}
+
+.o {
+  color: orange;
+}
+
+.w {
+  color: green;
+}
+
+#btn-rainbow {
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+}
+
+#btn-shadow {
+  background-color: rgb(165, 163, 163);
+  color: white;
+}
+
+
 button:hover {
-    box-shadow: 0 0 6px 0 black;
+    box-shadow: 0 -8px 8px 2px rgba(68, 243, 82, 0.4);
     cursor: pointer;
 }
 
@@ -35,7 +82,6 @@ button:hover {
   display: grid;
   grid-template-columns: 20% 79%;
   grid-auto-rows: minmax(10%, auto);
-  grid-gap: 15px;
   grid-template-areas: 
     "header header"
     "sidebar nav"
@@ -43,20 +89,31 @@ button:hover {
     "footer footer";
   text-align: center;
   height: 100%;
-  padding: 16px;
   box-sizing: border-box;
+}
+
+.content-container {
+  background-color: white;
+  width: 900px;
+  height: 900px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8rem;
+  margin-top: 5rem;
 }
 
  .content {
       display: grid;
-      margin: 2rem;
+      position: absolute;
       border: 1px solid rgb(59, 59, 59);
       grid-template-columns: repeat(var(--grid-row), 1fr);
       grid-template-rows: repeat(var(--grid-col), 1fr);
       width: 900px;
       height: 900px;
-      background-color: "white";
       box-shadow: 0 0 2px 0 black;
+      top: 0;
+      left: 0;
   }
 
   .row {
@@ -66,12 +123,20 @@ button:hover {
 
   .header {
   grid-area: header;
-  background-color: #54BAB9;
+  background-color: #1a2131;
+  color: #11eedb;
+  font-family: 'Nova Square', cursive;
+  font-size: 2rem;
+  width: 100vw;
 }
 
 .sidebar {
   grid-area: sidebar;
-  background-color: #18978F;
+  background-color: #0d0d27;
+  height: 100vh;
+  margin: 0;
+  padding: 3rem;
+  text-align: center;
 }
 
 
