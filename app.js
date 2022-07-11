@@ -12,7 +12,7 @@ const currentValue = document.getElementById("current-value");
 function pixelContainer(num) {
     document.documentElement.style.setProperty('--grid-row', num);
     document.documentElement.style.setProperty('--grid-col', num);
-    for(let i = 0; i < num * num; i++) {
+    for(let i = 0; i < (num * num); i++) {
         
         //Firstly, created the dynamic div grid.
         const elementRow = document.createElement("div");
@@ -20,6 +20,7 @@ function pixelContainer(num) {
         elementRow.setAttribute("id", "row-div");
         elementRow.style.backgroundColor= "white";
         mainContainer.appendChild(elementRow);
+        console.log(elementRow);
 
         //The variables needed for the rainbow pen.
         let color1 = Math.floor(Math.random() * 256);
@@ -58,14 +59,30 @@ function pixelContainer(num) {
             elementRow.style.backgroundColor = "white";
             console.log(btnClearAll);
         });
+
+        
     }
+    
 }
 
-slider.addEventListener('input', (e)=> {
-    let value = e.target.value;
-    currentValue.innerText = value;
-    num = parseInt(value);
-    console.log(slider.value);
-    console.log(num);
-    pixelContainer(slider.value);
-});
+
+function sliderAdjust() {
+            let value = parseInt(slider.value);
+            currentValue.innerText = value;
+                pixelContainer(value);
+                console.log(value);
+            
+        }
+slider.addEventListener('change', sliderAdjust); 
+
+pixelContainer(slider.min);
+
+
+
+
+
+
+
+
+
+
