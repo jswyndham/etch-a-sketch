@@ -27,26 +27,26 @@ function pixelContainer(num) {
 
     //Pen features
     btnBlack.addEventListener("click", () => {
-      elementRow.addEventListener("mouseover", () => {
+      elementRow.addEventListener("mousemove", () => {
         elementRow.style.backgroundColor = "black";
       });
     });
 
     btnRainbow.addEventListener("click", () => {
-      elementRow.addEventListener("mouseover", () => {
+      elementRow.addEventListener("mousemove", () => {
         elementRow.style.backgroundColor = `rgba(${color1},${color2},${color3})`;
       });
     });
 
     btnShadow.addEventListener("click", () => {
-      elementRow.addEventListener("mouseover", () => {
+      elementRow.addEventListener("mousemove", () => {
         elementRow.style.backgroundColor = `rgba(0, 0, 0, .2)`;
       });
     });
 
     // Erase buttons
     btnEraser.addEventListener("click", () => {
-      elementRow.addEventListener("mouseover", () => {
+      elementRow.addEventListener("mousemove", () => {
         elementRow.style.backgroundColor = "white";
       });
     });
