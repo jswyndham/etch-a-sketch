@@ -142,7 +142,7 @@ button:active {
 .content {
   display: grid;
   position: absolute;
-  border: 1px solid rgb(59, 59, 59);
+  border: 1px solid rgb(150, 150, 150);
   grid-template-columns: repeat(var(--grid-row), 1fr);
   grid-template-rows: (var(--grid-col), 1fr);
   width: 900px;
@@ -152,6 +152,6 @@ button:active {
 }
 
 .row {
-  border: 1px solid rgb(34, 34, 34);
+  border: 1px solid rgb(200, 200, 200);
   background-color: "white";
 }
