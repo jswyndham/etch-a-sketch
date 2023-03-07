@@ -13,8 +13,7 @@ function pixelContainer(num) {
   document.documentElement.style.setProperty("--grid-row", num);
   document.documentElement.style.setProperty("--grid-col", num);
   for (let i = 0; i < num * num; i++) {
-    //Firstly, created the dynamic div grid.
-
+    //Create dynamic div grid.
     const elementRow = document.createElement("div");
     elementRow.classList.add("row");
     elementRow.setAttribute("id", "row-div");
@@ -26,16 +25,10 @@ function pixelContainer(num) {
     let color2 = Math.floor(Math.random() * 256);
     let color3 = Math.floor(Math.random() * 256);
 
-    //Secondly, buttons that turns on the pen feature, plus clear all.
+    //Pen features
     btnBlack.addEventListener("click", () => {
       elementRow.addEventListener("mouseover", () => {
         elementRow.style.backgroundColor = "black";
-      });
-    });
-
-    btnEraser.addEventListener("click", () => {
-      elementRow.addEventListener("mouseover", () => {
-        elementRow.style.backgroundColor = "white";
       });
     });
 
@@ -51,14 +44,23 @@ function pixelContainer(num) {
       });
     });
 
+    // Erase buttons
+    btnEraser.addEventListener("click", () => {
+      elementRow.addEventListener("mouseover", () => {
+        elementRow.style.backgroundColor = "white";
+      });
+    });
+
     btnClearAll.addEventListener("click", () => {
       elementRow.style.backgroundColor = "white";
     });
   }
 }
 
+// Call the function. Grid size, 16 squares, set as default value.
 pixelContainer(gridBtnSixteen.value);
 
+// Grid size buttons - wipes the main container of grid (prevents repeatedly multiplying grid numbers), then calls the function with the new value.
 gridBtnSixteen.addEventListener("click", (e) => {
   while (mainContainer.lastElementChild) {
     mainContainer.removeChild(mainContainer.lastElementChild);
