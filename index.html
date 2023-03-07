@@ -1,58 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Nova+Square&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Nova+Square&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-a-Sketch</title>
-</head>
-<body>
-    
+  </head>
+
+  <body>
     <div class="main-container" id="mainContainer">
-        <header class="header" id="header">
-             <h1 class="main-heading" id="main-heading">
-                Etch-a-Sketch
-            </h1>
-        </header>
-       
-        <div class="content-container" id="content-container">
-            <div class="content" id="content"></div>
-        </div>
+      <header class="header" id="header">
+        <h1 class="main-heading" id="main-heading">Etch-a-Sketch</h1>
+      </header>
 
-        <div class="sidebar">
-            <button id="btn-black">black pen</button>
-            <button id="btn-rainbow"><span class="r">r</span><span class="a">a</span><span class="i">i</span><span class="n">n</span><span class="b">b</span><span class="o">o</span><span class="w">w</span> pen</button>
-            <button id="btn-shadow">shadow pen</button>
-            <button id="btn-eraser">eraser</button>
-            <button id="btn-clear-all">clear grid</button>
-            
-            <div class="rows-and-columns">
-                
-                <div class="slidecontainer">
-                    <p><scan>rows and columns</scan></p>
+      <div class="content-container" id="content-container">
+        <div class="content" id="content"></div>
+      </div>
 
-                        <div class="show-value">
-                            <span id="current-value">16</span>
-                        </div>
+      <div class="sidebar">
+        <!-- Buttons to interact with the grid -->
+        <h4>Choose a pen</h4>
+        <button class="pen-btn" id="btn-black">black pen</button>
+        <button class="pen-btn" id="btn-rainbow">
+          <span class="r">r</span><span class="a">a</span
+          ><span class="i">i</span><span class="n">n</span
+          ><span class="b">b</span><span class="o">o</span
+          ><span class="w">w</span> pen
+        </button>
+        <button class="pen-btn" id="btn-shadow">shadow pen</button>
+        <button class="pen-btn" id="btn-eraser">eraser</button>
+        <button class="pen-btn" id="btn-clear-all">clear grid</button>
 
-                    <input type="range" min="16" max="32" value="16" class="slider" id="myRange">
-
-                    <div class="range">
-                        <div class="range-start">16</div>
-                        <div class="range-end">32</div>
-                    </div>
-                </div>
-                
-            </div>
-
-        </div>
-
+        <!-- Buttons to adjust grid size -->
+        <h4>Adjust grid size</h4>
+        <button class="grid-btn" id="grid-sixteen" value="16">16</button>
+        <button class="grid-btn" id="grid-thirty-two" value="32">32</button>
+        <button class="grid-btn" id="grid-forty-eight" value="48">48</button>
+      </div>
     </div>
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
